@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: #505050;
+    color: white;
+    padding: 15px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+nav {
+    background-color: #7F7F7F;
+    color: white;
+    padding: 1;
+}
+
+#nav li {
+    display: inline-block;
+    padding: 5px 22px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#nav li:hover {
+    background-color: black;
+}
+
+#nav li:nth-child(2):hover #sm1,
+#nav li:nth-child(3):hover #sm2 {
+    display: block;
+}
+
+#nav li:nth-child(2):active #sm1,
+#nav li:nth-child(3):active #sm2 {
+    display: block;
+}
+
+#sm1 {
+    display: none;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    background-color:#F5F5F5;
+    top: 100px;
+    min-width: 151px;
+    left: 108px;
+}
+
+#sm2 {
+    display: none;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    background-color:#F5F5F5;
+    min-width: 135px;
+    top: 100px;
+    left: 270px;
+}
+
+#sm1 li:hover,
+#sm2 li:hover {
+    background-color: gainsboro;
+}
+
+#sm1 li a,
+#sm2 li a{
+    color:steelblue;
+    font-size: 16px;
+}
+
+#sm1 li,
+#sm2 li {
+    display: block;
+    padding: 10px;
+}
+
+section>p {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 9px;
+}
+
+.products {
+    width:20%;
+    min-width: 140px;
+    min-height: 180px;
+    overflow: hidden;
+    height: 310px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #F3F3FD;
+    box-shadow: 5px 5px 10px gainsboro;
+    border-radius: 3px;
+    line-height: 30px;
+    margin: 20px 15px 20px 8px;
+}
+
+.products p {
+    color: steelblue;
+}
+
+#head {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.cart {
+    min-width: 140 px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #5C58AF;
+    background-color:#EFF5FF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cart a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.pro_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 45%;
+    padding: 5px;
+}
+
+.cart:active {
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+    color: black;
+}
+
+.products:hover {
+    scale: 110%;
+}
+
+footer h4{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: medium;
+    font-weight: bolder;
+}

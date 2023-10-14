@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Test</title>
+    <link rel="stylesheet" href="MedicalTest_form.css">
+</head>
+
+<body>
+    <h1>Medical Test Form</h1>
+   
+    <div class="container">
+        <form action="#" id="labtestform" onsubmit="return validateCheckbox()">
+            <img src="lab-test.jpg" alt="Lab-Test">
+            <br>
+            <p>1. Your Contact Details</p>
+            <br>
+            <div class="row">
+                
+                    <input type="text" title="F_Name" placeholder="Full Name" required>
+                
+                    <input type="number" title="P_Id" placeholder="Patient Id if exist">
+                
+            </div>
+            <div class="row">
+                
+                    <input type="number" title="contact" placeholder="Contact Number" min="6666666666" max="9999999999"
+                        required>
+
+                    <input type="email" title="Mail" placeholder="E-mail Id">
+               
+            </div>
+            <br>
+
+            <p>2. Address</p>
+            <br>
+            <div class="row">
+                
+                    <input type="text" title="H.No" placeholder="H-No" required>
+                    <input type="text" title="Street" placeholder="Street" required>
+               
+            </div>
+            <div class="row">
+               
+                    <input type="text" title="Area" placeholder="Area">
+                    <br><br>
+                    <h3>District</h3>
+                    <br>
+                    <select name="district" id="district" class="inputBox">
+                        <option>Choose</option>
+                        <option value="Bilaspur">Bilaspur</option>
+                        <option value="Raipur">Raipur</option>
+                        <option value="Bhilai">Bhilai</option>
+                        <option value="Durg">Durg</option>
+                        <option value="Champa">Champa</option>
+                        <option value="Raigarh">Raigarh</option>
+                        <option value="Janjgir">Janjgir</option>
+                        <option value="Balod">Balod</option>
+                    </select>
+                
+            </div>
+
+           
+            <br><br>
+
+            <p>3. Choose the Test Type</p>
+            <br>
+            <h5>(Check atleast one box without fail)</h5>
+            <div class="Lab_test">
+                <input type="checkbox" title="Test1" id="checkbox1" value="CBC">
+                <label for="Test1">CBC</label><br>
+
+                <input type="checkbox" title="Test2" id="checkbox2" value="Complete Urine">
+                <label for="Test2">Complete Urine</label><br>
+
+                <input type="checkbox" title="Test3" id="checkbox3" value="Lipid Profile">
+                <label for="Test3">Lipid Profile</label><br>
+
+                <input type="checkbox" title="Test4" id="checkbox4" value="Thyroid Stimulating Hormone (TSH)">
+                <label for="Test4">Thyroid Stimulating Hormone (TSH)</label><br>
+
+                <input type="checkbox" title="Test5" id="checkbox5" value="Gulcose Test">
+                <label for="Test5">Glucose Test </label>
+            </div>
+            <br>
+
+            <p>4. Do you want a hard copy of the report also?</p>
+            <div class="Lab_test">
+                <input type="radio" title="option1" name="option" value="Yes">
+                <label for="option1">Yes</label>
+                <br>
+                <input type="radio" title="option1" name="option" value="No">
+                <label for="option1">No</label>
+            </div>
+            <br>
+
+            <p>5. Select your Comfortable Date and Time</p>
+            <div class="contact_details">
+                <input type="date" title="Date" placeholder="Date" required>
+                <br>
+
+                <input type="time" title="Time" placeholder="Time" required>
+                <br>
+            </div>
+            <br>
+        </form>
+      
+    </div>
+    
+    <div class="button-container">
+    <button form= "labtestform" id="reset" type="reset" value="Reset">Reset</button>
+    <button  form="labtestform" id="submit" type="Submit" value="Submit">Submit</button>
+    </div>
+   
+</body>
+<script>
+
+function validateCheckbox() {
+    const checkbox1 = document.getElementById('checkbox1');
+    const checkbox2 = document.getElementById('checkbox2');
+    const checkbox3 = document.getElementById('checkbox3');
+    const checkbox4 = document.getElementById('checkbox4');
+    const checkbox5 = document.getElementById('checkbox5');
+  
+    if (!checkbox1.checked && !checkbox2.checked && !checkbox3.checked && !checkbox4.checked && !checkbox5.checked  ) {
+      alert('Please check at least one checkbox.');
+      return false;
+    } else {
+     return true;
+    }
+  }
+</script>
+
+</html>
